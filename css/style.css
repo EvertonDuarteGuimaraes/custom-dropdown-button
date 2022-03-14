@@ -1,0 +1,122 @@
+*,
+*:after,
+*:hover {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: basic-sans, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.125em;
+  background: whitesmoke;
+}
+
+.dropdown-place {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dropdown-place-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 0.5rem;
+  padding: 0;
+  border-radius: 19px;
+  background: white;
+  border: 2px solid lightblue;
+}
+
+.dropdown-place-option {
+  width: 365px;
+  height: 44px;
+  background: transparent;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+.dropdown-place-option:hover {
+  cursor: pointer;
+  background: lightgray;
+  border-radius: 19px;
+}
+
+#selected {
+  width: 370px;
+  height: 49px;
+  position: relative;
+  background: grey;
+  border: 2px solid lightblue;
+  border-radius: 19px;
+}
+
+#selected:hover {
+  cursor: pointer;
+  background: lightgray;
+}
+
+#selected:hover::before {
+  border-top: 1em solid lightgray;
+}
+
+#selected::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 1em solid transparent;
+  border-top: 1em solid white;
+  border-radius: 50px;
+}
+
+#selected::before {
+  content: '';
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  border: 1em solid transparent;
+  border-top: 1em solid grey;
+  z-index: 1;
+}
+/*# sourceMappingURL=style.css.map */
