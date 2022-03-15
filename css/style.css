@@ -61,9 +61,11 @@ body {
   border-radius: 19px;
   background: white;
   border: 2px solid lightblue;
+  z-index: 1;
 }
 
 .dropdown-place-option {
+  cursor: pointer;
   width: 365px;
   height: 44px;
   background: transparent;
@@ -76,8 +78,7 @@ body {
   overflow: hidden;
 }
 
-.dropdown-place-option:hover {
-  cursor: pointer;
+.dropdown-place-option:hover:not(#selected) {
   background: lightgray;
   border-radius: 19px;
 }
@@ -91,15 +92,6 @@ body {
   border-radius: 19px;
 }
 
-#selected:hover {
-  cursor: pointer;
-  background: lightgray;
-}
-
-#selected:hover::before {
-  border-top: 1em solid lightgray;
-}
-
 #selected::after {
   content: '';
   position: absolute;
@@ -108,6 +100,10 @@ body {
   border: 1em solid transparent;
   border-top: 1em solid white;
   border-radius: 50px;
+}
+
+#selected:hover::after {
+  border-top: 1em solid lightblue;
 }
 
 #selected::before {

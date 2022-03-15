@@ -36,10 +36,12 @@ body {
         border-radius: 19px;
         background: white;
         border: 2px solid lightblue;
+        z-index: 1;
     }
 }
 
 .dropdown-place-option {
+    cursor: pointer;
     width: 365px;
     height: 44px;
     background: transparent;
@@ -50,8 +52,7 @@ body {
     font-size: 0.9rem;
     overflow: hidden;
 
-    &:hover {
-        cursor: pointer;
+    &:hover:not(#selected) {
         background: lightgray;
         border-radius: 19px;
     }
@@ -65,15 +66,6 @@ body {
     border: 2px solid lightblue;
     border-radius: 19px;
 
-    &:hover {
-        cursor: pointer;
-        background: lightgray;
-
-        &::before {
-            border-top: 1em solid lightgray;
-        }
-    }
-
     &::after {
         content: '';
         position: absolute;
@@ -83,6 +75,12 @@ body {
         border: 1em solid transparent;
         border-top: 1em solid white;
         border-radius: 50px;
+    }
+
+    &:hover {
+        &::after {
+            border-top: 1em solid lightblue;
+        }
     }
 
     &::before {
