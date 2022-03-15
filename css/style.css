@@ -55,8 +55,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
-  top: 0.5rem;
+  position: absolute;
+  top: 57px;
   padding: 0;
   border-radius: 19px;
   background: white;
